@@ -5,65 +5,65 @@
 @tailwind utilities;
 
 @layer base {
-    :root {
-        --color-default: #6366f1;
-        --color-light: #7375f2;
-        --color-dark: #595cd9;
+  :root {
+    --color-default: #6366f1;
+    --color-light: #7375f2;
+    --color-dark: #595cd9;
 
-        --bg-1: #ffffff;
-        --bg-2: #fcfcff;
-        --bg-3: #f5f5fe;
-        --bg-4: #e0e0fc;
+    --bg-1: #ffffff;
+    --bg-2: #fcfcff;
+    --bg-3: #f5f5fe;
+    --bg-4: #e0e0fc;
 
-        --tx-1: #121219;
-        --tx-2: #35364a;
-        --tx-3: #7c7dae;
-    }
+    --tx-1: #121219;
+    --tx-2: #35364a;
+    --tx-3: #7c7dae;
+  }
 
-    html {
-        @apply scroll-smooth select-none;
-    }
+  html {
+    @apply scroll-smooth select-none;
+  }
 
-    body {
-        @apply relative w-screen min-h-screen
+  body {
+    @apply relative w-screen min-h-screen
         flex
         leading-7
         bg-bg-1 text-tx-1
         overflow-x-hidden overflow-y-auto
         transition antialiased;
 
-        #__next {
-            @apply w-full flex flex-1;
+    #__next {
+      @apply w-full flex flex-1;
 
-            .main {
-                @apply w-auto h-auto
+      .main {
+        @apply w-auto h-auto
                 flex flex-col flex-1
                 z-10;
-            }
-        }
+      }
     }
+  }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-        line-height: 1.3;
-        font-weight: 700;
-    }
-    h1 {
-        font-size: 4.209rem;
-    }
-    h2 {
-        font-size: 3.157rem;
-    }
-    h3 {
-        font-size: 2.369rem;
-    }
-    h4 {
-        font-size: 1.777rem;
-    }
-    h5 {
-        font-size: 1.333rem;
-    }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    line-height: 1.3;
+    font-weight: 700;
+  }
+  h1 {
+    font-size: 4.209rem;
+  }
+  h2 {
+    font-size: 3.157rem;
+  }
+  h3 {
+    font-size: 2.369rem;
+  }
+  h4 {
+    font-size: 1.777rem;
+  }
+  h5 {
+    font-size: 1.333rem;
+  }
 }

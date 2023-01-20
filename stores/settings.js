@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
   color: '#6366f1',
   soundEffect: null,
+  headerStatus: true,
   colorFormat: {
     active: null,
     list: [
@@ -23,9 +24,9 @@ const initialState = {
     { name: 'Sunset', color: '#FF8200' },
     { name: 'Gold', color: '#FFBF00' },
     { name: 'Pistachio', color: '#C1DF1F' },
+    { name: 'Aqua', color: '#44D7A8' },
     { name: 'Meadow', color: '#10b981' },
     { name: 'Jade', color: '#009B77' },
-    { name: 'Aqua', color: '#44D7A8' },
     { name: 'Sapphire', color: '#38bdf8' },
     { name: 'Navy', color: '#6366f1' },
     { name: 'Violet', color: '#7209b7' },
@@ -68,11 +69,18 @@ export const settingsSlice = createSlice({
     changeColorFormat: (state, action) => {
       state.colorFormat.active = action.payload
       localStorage.setItem('copyFormat', action.payload)
+    },
+    changeHeaderStatus: (state, action) => {
+      state.headerStatus = action.payload
     }
   }
 })
 
-export const { changeColor, changeSoundEffect, changeColorFormat } =
-  settingsSlice.actions
+export const {
+  changeColor,
+  changeSoundEffect,
+  changeColorFormat,
+  changeHeaderStatus
+} = settingsSlice.actions
 
 export default settingsSlice.reducer

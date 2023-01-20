@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "icon": "svgr assets/icons -d components/icons --no-dimensions --replace-attr-values \"#123456=currentColor\""
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",

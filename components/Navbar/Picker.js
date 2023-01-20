@@ -1,4 +1,4 @@
-import styles from '@/components/navbar/index.module.css'
+import styles from '@/components/Navbar/index.module.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { TwitterPicker } from 'react-color'
 import { changeColor } from '@/stores/settings'

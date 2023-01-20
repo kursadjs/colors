@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Layout from '@/components/Layout'
-import Navbar from '@/components/navbar'
+import Navbar from '@/components/Navbar'
 import { useSelector } from 'react-redux'
-import Colors from '@/components/colors'
+import Colors from '@/components/Colors'
 import Values from 'values.js'
 
 export default function ThemeGenerator() {

@@ -10,7 +10,7 @@ import {
   ThemeGeneratorFill,
   ToneGenerator,
   ToneGeneratorFill
-} from '@/components/icons'
+} from '@/components/Icons'
 import { useRouter } from 'next/router'
 
 const Header = () => {

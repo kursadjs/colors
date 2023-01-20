@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { changeColorFormat } from '@/stores/settings'
 import styles from './index.module.css'
-import { Copy } from '@/components/icons'
+import { Copy } from '@/components/Icons'
 
 const ColorFormat = () => {
   // Redux Store

@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
-import styles from '@/components/navbar/index.module.css'
+import styles from '@/components/Navbar/index.module.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { changeSoundEffect } from '@/stores/settings'
-import { Mute, Volume } from '@/components/icons'
+import { Mute, Volume } from '@/components/Icons'
 
 const SoundEffect = () => {
   const { soundEffect } = useSelector((state) => state.settings)

@@ -1,7 +1,7 @@
 import styles from './index.module.css'
-import ColorFormat from '@/components/navbar/ColorFormat'
-import Picker from '@/components/navbar/Picker'
-import SoundEffect from '@/components/navbar/SoundEffect'
+import ColorFormat from '@/components/Navbar/ColorFormat'
+import Picker from '@/components/Navbar/Picker'
+import SoundEffect from '@/components/Navbar/SoundEffect'
 
 const Navbar = ({ noPicker }) => {
   return (

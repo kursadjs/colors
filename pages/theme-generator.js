@@ -45,7 +45,7 @@ export default function ThemeGenerator() {
       <Navbar />
 
       <div className="w-full h-auto flex flex-col flex-1">
-        <Colors grid={1}>
+        <Colors grid={`single`}>
           <Colors.Section title={`Light Theme`}>
             {tint.map((item) => (
               <Colors.Item key={item.weight} data={item} />

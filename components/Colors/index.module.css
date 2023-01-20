@@ -1,6 +1,13 @@
 .article {
   @apply w-full h-auto grid grid-cols-1 flex-1 bg-bg-1 p-4 gap-12;
 
+  &.multiple {
+    @apply grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4;
+  }
+  &.single {
+    @apply grid-cols-1;
+  }
+
   .section {
     @apply w-full h-auto flex flex-col flex-1 gap-1;
 

@@ -42,7 +42,7 @@ export default function Home() {
 
       <Navbar noPicker />
 
-      <Colors grid={3}>
+      <Colors grid={`multiple`}>
         {color.map((item, index) => (
           <Colors.Section title={item.name} key={index}>
             {item.pallette.map((i) => (

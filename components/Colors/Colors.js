@@ -5,13 +5,7 @@ import { useState } from 'react'
 
 const Colors = ({ children, grid, ...props }) => {
   return (
-    <article
-      className={styles.article}
-      style={{
-        gridTemplateColumns: `repeat(${grid}, minmax(0, 1fr)`
-      }}
-      {...props}
-    >
+    <article className={`${styles.article} ${styles[grid]}`} {...props}>
       {children}
     </article>
   )

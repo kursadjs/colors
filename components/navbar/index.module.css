@@ -1,0 +1,68 @@
+.navbar {
+  @apply sticky top-0 w-full h-auto flex items-center z-50 p-4 bg-bg-1 gap-4;
+
+  .box {
+    @apply relative w-auto h-auto flex items-center bg-bg-2 rounded-full border-[1px] border-bg-3 p-1.5 transition-all cursor-pointer;
+
+    &:hover,
+    &:focus {
+      @apply bg-bg-3;
+
+      .bottom {
+        @apply opacity-100 pointer-events-auto;
+      }
+    }
+
+    .top {
+      @apply w-full h-full flex items-center;
+
+      .cover {
+        @apply w-6 h-6 flex bg-transparent rounded-full;
+
+        svg {
+          @apply w-full h-full flex text-main;
+        }
+      }
+
+      .description {
+        @apply w-auto h-auto flex px-3;
+
+        p {
+          @apply text-xs font-bold text-tx-2;
+        }
+      }
+    }
+
+    .bottom {
+      @apply h-auto flex flex-col absolute left-[-0.25rem] top-full mt-[-0.25rem] z-20 transition-all opacity-0 pointer-events-none;
+    }
+  }
+}
+
+.picker {
+  .bottom {
+    @apply w-60;
+  }
+}
+.colorFormat {
+  .bottom {
+    @apply w-full;
+  }
+}
+
+.picker {
+}
+
+.sound {
+  @apply w-8 h-8 mt-1 z-10 cursor-pointer;
+
+  &:hover {
+    svg {
+      @apply text-tx-1;
+    }
+  }
+
+  svg {
+    @apply text-tx-2 transition-all;
+  }
+}

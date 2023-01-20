@@ -1,0 +1,92 @@
+.article {
+  @apply w-full h-auto grid grid-cols-1 flex-1 bg-bg-1 p-4 gap-12;
+
+  .section {
+    @apply w-full h-auto flex flex-col flex-1 gap-1;
+
+    .title {
+      @apply text-base font-medium text-tx-1;
+    }
+
+    .pallette {
+      @apply w-full h-auto flex flex-1 rounded-xl border border-bg-3 overflow-hidden;
+    }
+  }
+}
+
+.item {
+  @apply relative
+  w-auto min-h-[164px]
+  flex flex-col flex-1 justify-center items-center shrink-0
+  bg-[var(--bg)] text-[var(--ct)]
+  overflow-hidden transition-all cursor-pointer;
+
+  &:hover {
+    @apply flex-[3];
+
+    p {
+      @apply opacity-90 scale-100;
+    }
+  }
+
+  p {
+    @apply absolute
+    flex justify-center items-center
+    text-sm font-medium text-inherit
+    opacity-0
+    scale-50
+    px-3 py-2
+    transition-all;
+
+    &:after {
+      content: '';
+      @apply absolute inset-0 flex bg-[var(--ct)] rounded-lg opacity-[0.08] -z-10;
+    }
+  }
+}
+
+.copied {
+  animation: zoom-opacity 0.3s ease-in-out;
+  animation-delay: 0.75s;
+  @apply fixed inset-0 z-[1000] flex flex-col items-center justify-center bg-[var(--bg)] gap-8;
+
+  &:after {
+    content: '';
+    @apply absolute inset-0 flex bg-gradient-to-r from-[var(--ct)] to-transparent opacity-25 -z-10;
+  }
+
+  .container {
+    animation: zoom-out 1.2s cubic-bezier(0.49, -0.29, 0.01, 1.16);
+    @apply w-full h-auto flex flex-col items-center justify-center gap-8 py-12 border-y-[12px] border-double border-[var(--ct)] text-[var(--ct)] bg-inherit shadow-2xl;
+
+    h1 {
+      text-shadow: 8px 4px var(--zt);
+      @apply text-9xl font-bold text-inherit uppercase -skew-x-12;
+    }
+    p {
+      box-shadow: 6px 6px var(--zt);
+      @apply text-2xl font-medium py-3 px-6 text-[var(--zt)] bg-[var(--ct)] rounded;
+    }
+
+    @keyframes zoom-out {
+      0% {
+        transform: scale(1.1, 1.1);
+      }
+      100% {
+        transform: scale(1.3, 1.3);
+      }
+    }
+  }
+  @keyframes zoom-opacity {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+.sound {
+  @apply w-0 h-0 fixed pointer-events-none;
+}

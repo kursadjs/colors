@@ -25,7 +25,7 @@
   }
 
   body {
-    @apply relative w-screen min-h-screen
+    @apply relative w-full min-h-screen
         flex
         leading-7
         bg-bg-1 text-tx-1

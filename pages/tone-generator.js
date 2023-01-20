@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Layout from '@/components/Layout'
-import Colors from '@/components/Colors'
-import Navbar from '@/components/Navbar'
+import Colors from '@/components/Colors/Colors'
+import Navbar from '@/components/Navbar/Navbar'
 import { useSelector } from 'react-redux'
 import Values from 'values.js'
 

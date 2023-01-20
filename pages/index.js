@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Layout from '@/components/Layout'
-import Navbar from '@/components/Navbar'
+import Navbar from '@/components/Navbar/Navbar'
 import { useSelector } from 'react-redux'
-import Colors from '@/components/Colors'
+import Colors from '@/components/Colors/Colors'
 import Values from 'values.js'
 import { useEffect, useState } from 'react'
 

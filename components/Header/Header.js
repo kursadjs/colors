@@ -12,8 +12,15 @@ import {
   ToneGeneratorFill
 } from '@/components/Icons'
 import { useRouter } from 'next/router'
+import { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { changeHeaderStatus } from '@/stores/settings'
 
 const Header = () => {
+  // Redux Store
+  const { headerStatus } = useSelector((state) => state.settings)
+  const dispatch = useDispatch()
+
   const router = useRouter()
   const active = router.asPath
 
@@ -60,7 +67,11 @@ const Header = () => {
   ]
 
   return (
-    <div className={styles.header}>
+    <div
+      className={`${styles.header} ${
+        headerStatus === false ? styles.open : ''
+      }`}
+    >
       <div className={styles.logo}>
         <button onClick={() => router.push('/')}>
           <Logo />
@@ -76,7 +87,10 @@ const Header = () => {
           <button
             key={item.name}
             className={item.src === active ? styles.active : ''}
-            onClick={() => router.push(item.src)}
+            onClick={() => {
+              router.push(item.src)
+              dispatch(changeHeaderStatus(!headerStatus))
+            }}
           >
             {item.src === active ? item.iconFill : item.icon}
             <p>{item.title}</p>
@@ -115,6 +129,12 @@ const Header = () => {
           </button>{' '}
           with NextJS.
         </p>
+      </div>
+
+      <div className={styles.closeButton}>
+        <button onClick={() => dispatch(changeHeaderStatus(!headerStatus))}>
+          Close Menu
+        </button>
       </div>
     </div>
   )

@@ -1,5 +1,10 @@
 .header {
-  @apply sticky top-0 w-80 h-screen flex flex-col shrink-0 bg-bg-2 p-8 gap-8 border-r-[1px]  border-r-bg-3;
+  @apply fixed w-screen h-screen z-20 hidden flex-col shrink-0 bg-bg-2 p-8 gap-8
+  md:sticky md:top-0 md:flex md:w-80 md:z-0 md:border-r-[1px] md:border-r-bg-3;
+
+  &.open {
+    @apply flex md:flex;
+  }
 
   .logo {
     @apply w-full h-auto flex;
@@ -91,6 +96,14 @@
           @apply text-main;
         }
       }
+    }
+  }
+
+  .closeButton {
+    @apply w-full h-auto flex md:hidden;
+
+    button {
+      @apply w-full h-12 flex items-center justify-center text-tx-2 bg-bg-3 rounded text-sm font-medium;
     }
   }
 }

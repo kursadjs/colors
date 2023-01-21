@@ -1,5 +1,5 @@
 .navbar {
-  @apply sticky top-0 w-full h-auto flex items-center z-50 p-4 bg-bg-1 gap-4;
+  @apply sticky top-0 w-auto h-auto flex items-center z-50 p-4 bg-bg-1 gap-4;
 
   .box {
     @apply relative w-auto h-auto flex items-center bg-bg-2 rounded-full border-[1px] border-bg-3 p-1.5 transition-all cursor-pointer;
@@ -39,7 +39,27 @@
   }
 }
 
+.headerOpen {
+  @apply w-auto h-auto flex md:hidden;
+
+  button {
+    @apply w-full h-full flex flex-col gap-1.5 rounded-full p-1.5 transition-all;
+
+    span {
+      @apply w-8 h-0.5 flex bg-tx-3;
+    }
+  }
+}
+
 .picker {
+  .top {
+    .description {
+      display: none !important;
+      @media (min-width: 640px) {
+        display: flex !important;
+      }
+    }
+  }
   .bottom {
     @apply w-60;
   }

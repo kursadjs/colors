@@ -68,11 +68,13 @@
 
     h1 {
       text-shadow: 8px 4px var(--zt);
-      @apply text-9xl font-bold text-inherit uppercase -skew-x-12;
+      @apply text-5xl font-bold text-inherit uppercase -skew-x-12
+      sm:text-6xl md:text-7xl  xl:text-9xl;
     }
     p {
       box-shadow: 6px 6px var(--zt);
-      @apply text-2xl font-medium py-3 px-6 text-[var(--zt)] bg-[var(--ct)] rounded;
+      @apply text-base font-medium py-2 px-4 text-[var(--zt)] bg-[var(--ct)] rounded
+      xl:text-2xl xl:py-3 xl:px-6;
     }
 
     @keyframes zoom-out {
@@ -84,6 +86,7 @@
       }
     }
   }
+
   @keyframes zoom-opacity {
     0% {
       opacity: 1;
